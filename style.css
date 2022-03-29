@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #241f1f;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-green {
+  color: limegreen;
+}
+
+.fira-font {
+  font-family: "Fira Code", monospace;
+}
+
+.text-pink {
+  color: #ea00ff;
+}
+
+.command-container {
+  background: maroon;
+  padding: 8px;
+  margin: 16px 0;
+}
+.command-container .label {
+  margin-bottom: 4px;
+}
+.command-container .command-area {
+  display: flex;
+  background: black;
+  padding: 8px;
+}
+.command-container .command-area .prefix {
+  font-weight: bold;
+  width: 70px;
+}
+.command-container .command-area .command {
+  font-family: "Fira Code", monospace;
+}
+
+/*# sourceMappingURL=style.css.map */

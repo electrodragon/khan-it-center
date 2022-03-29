@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #241f1f;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-green {
+    color: limegreen;
+}
+
+.fira-font {
+    font-family: 'Fira Code', monospace;
+}
+
+.text-pink {
+    color: rgb(234, 0, 255);
+}
+
+.command-container {
+    background: maroon;
+    padding: 8px;
+    margin: 16px 0;
+
+    .label {
+        margin-bottom: 4px;
+    }
+
+    .command-area {
+        display: flex;
+        background: black;
+        padding: 8px;
+        
+        .prefix {
+            font-weight: bold;            
+            width: 70px;
+        }
+
+        .command {
+            font-family: 'Fira Code', monospace;
+        }
+    }
+}
