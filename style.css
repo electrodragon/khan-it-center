@@ -8,10 +8,41 @@ body {
   background: #241f1f;
   color: white;
   font-family: "Montserrat", sans-serif;
+  height: 100vh;
 }
 
-.bold {
-  font-weight: bold;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.dir-contents-container {
+  display: flex;
+}
+.dir-contents-container .item {
+  margin: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(75, 0, 0, 0.425);
+  border: 1px solid red;
+}
+.dir-contents-container .item.selectable:hover {
+  cursor: pointer;
+}
+.dir-contents-container .item .dir-img {
+  width: 64px;
+}
+.dir-contents-container .item .img {
+  width: 64px;
+}
+.dir-contents-container .item .name {
+  margin: 0;
 }
 
 .text-green {
@@ -19,31 +50,6 @@ body {
 }
 
 .fira-font {
-  font-family: "Fira Code", monospace;
-}
-
-.text-pink {
-  color: #ea00ff;
-}
-
-.command-container {
-  background: maroon;
-  padding: 8px;
-  margin: 16px 0;
-}
-.command-container .label {
-  margin-bottom: 4px;
-}
-.command-container .command-area {
-  display: flex;
-  background: black;
-  padding: 8px;
-}
-.command-container .command-area .prefix {
-  font-weight: bold;
-  width: 70px;
-}
-.command-container .command-area .command {
   font-family: "Fira Code", monospace;
 }
 

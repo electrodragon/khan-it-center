@@ -8,11 +8,55 @@ body {
     background: #241f1f;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    height: 100vh;
 }
 
-.bold {
-    font-weight: bold;
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
 }
+
+.dir-contents-container {
+    display: flex;
+
+    .item {
+        margin: 8px;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // flex: 1;
+        // flex-wrap: wrap;
+        // flex-direction: row;
+        // width: auto;
+        // height: 350px;
+        background: rgba(75, 0, 0, 0.425);
+        border: 1px solid red;
+    
+        &.selectable:hover {
+            cursor: pointer;
+        }
+    
+        .dir-img {
+            width: 64px;
+            // height: 
+        }
+    
+        .img {
+            width: 64px;
+        }
+    
+        .name {
+            margin: 0;
+        }
+    }
+
+}
+
 
 .text-green {
     color: limegreen;
@@ -20,33 +64,4 @@ body {
 
 .fira-font {
     font-family: 'Fira Code', monospace;
-}
-
-.text-pink {
-    color: rgb(234, 0, 255);
-}
-
-.command-container {
-    background: maroon;
-    padding: 8px;
-    margin: 16px 0;
-
-    .label {
-        margin-bottom: 4px;
-    }
-
-    .command-area {
-        display: flex;
-        background: black;
-        padding: 8px;
-        
-        .prefix {
-            font-weight: bold;            
-            width: 70px;
-        }
-
-        .command {
-            font-family: 'Fira Code', monospace;
-        }
-    }
 }
