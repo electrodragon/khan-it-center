@@ -49,6 +49,7 @@
         courseContents=[],
         projectsList=null
     }) => {
+	fee = fee === 0 ? 0 : fee + 1000;
         const course = appendItems(
             createItemWithClassNameAndInnerText('div', 'course'),
             appendItems(  /** HEAD */
@@ -132,6 +133,10 @@
             course.querySelector('.discount-percentage').innerText = `${oldPercentage}%`;
             course.querySelector('.fee').innerText = `Rs. ${Math.floor(fee - (oldPercentage / 100 * fee))}/-`;
         });
+
+        if (fee === 0) {
+	    course.querySelector('.discounts-area').remove();
+	}
 
         return course;
     }
