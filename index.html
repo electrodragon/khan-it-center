@@ -1,602 +1,870 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Dual Boot Guide</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-                
-        <div class="listing-trail"></div>
-                
-        <div class="dir-contents-container"></div>
-                
-    </div>
-    <script>
-        const volumeMeta = {
-            content: [
-                {
-                    type: 'dir',
-                    name: 'Main Folder 1',
-                    content: [
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'abc.c'
-                                        },
-                                        {
-                                            type: 'file',
-                                            name: 'Abc.java'
-                                        }
-                                    ]
-                                },
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 2',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'abc.cpp'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 2',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 3',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Pikachu.mp4'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 4',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Mr Pickles.avi'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'file',
-                            name: 'Hello, World.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'abc.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'counting.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'lorem ipsum.c'
-                        }
-                    ]
-                },
-                {
-                    type: 'dir',
-                    name: 'Main Folder 2',
-                    content: [
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'abc.c'
-                                        },
-                                        {
-                                            type: 'file',
-                                            name: 'Abc.java'
-                                        }
-                                    ]
-                                },
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 2',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'abc.cpp'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'file',
-                            name: 'Hello, World.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'abc.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'counting.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'lorem ipsum.c'
-                        }
-                    ]
-                },
-                {
-                    type: 'dir',
-                    name: 'Main Folder 3',
-                    content: [
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'abc.c'
-                                        },
-                                        {
-                                            type: 'file',
-                                            name: 'Abc.java'
-                                        }
-                                    ]
-                                },
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 2',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'abc.cpp'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'file',
-                            name: 'Hello, World.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'abc.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'counting.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'lorem ipsum.c'
-                        }
-                    ]
-                },
+</head>
+<body>
 
-                {
-                    type: 'dir',
-                    name: 'Main Folder 4',
-                    content: [
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'abc.c'
-                                        },
-                                        {
-                                            type: 'file',
-                                            name: 'Abc.java'
-                                        }
-                                    ]
-                                },
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 2',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'abc.cpp'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'file',
-                            name: 'Hello, World.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'abc.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'counting.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'lorem ipsum.c'
-                        }
-                    ]
-                },
-                {
-                    type: 'dir',
-                    name: 'Main Folder 5',
-                    content: [
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'abc.c'
-                                        },
-                                        {
-                                            type: 'file',
-                                            name: 'Abc.java'
-                                        }
-                                    ]
-                                },
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 2',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'abc.cpp'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'dir',
-                            name: 'Sub Folder 1',
-                            content: [
-                                {
-                                    type: 'dir',
-                                    name: 'Depth Folder 1',
-                                    content: [
-                                        {
-                                            type: 'file',
-                                            name: 'Happy Eevee'
-                                        }
-                                    ]
-                                },
-                            ]
-                        },
-                        {
-                            type: 'file',
-                            name: 'Hello, World.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'abc.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'counting.txt'
-                        },
-                        {
-                            type: 'file',
-                            name: 'lorem ipsum.c'
-                        }
-                    ]
-                },
+<div class="main-page">
+    <div class="side-nav"></div>
+    <div class="courses-warehouse"></div>
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+<script>
+    const sideNav = document.querySelector('.side-nav');
+    const coursesWareHouse = document.querySelector('.courses-warehouse');
+
+    const createItemWithClassNameAndInnerText = (item='div', className='', innerText='') => {
+        const tempItem = document.createElement(item);
+        tempItem.classList.add(className);
+        tempItem.innerText = innerText;
+        return tempItem;
+    }
+
+    const appendItems = (element, ...items) => {
+        items.forEach(item => {
+            element.appendChild(typeof(item) === 'function' ? item() : item);
+        })
+        return element;
+    }
+
+    const courseCreator = ({
+        courseTitle='Awesome Course',
+        fee=null,
+        durationDays=0,
+        prerequisites=null,
+        courseContents=[],
+        projectsList=null
+    }) => {
+        const course = appendItems(
+            createItemWithClassNameAndInnerText('div', 'course'),
+            appendItems(  /** HEAD */
+                createItemWithClassNameAndInnerText('div', 'head'),
+                createItemWithClassNameAndInnerText('h3', 'course-title', courseTitle),
+                appendItems(
+                    createItemWithClassNameAndInnerText('div', 'duration-and-fee'),
+                    createItemWithClassNameAndInnerText('h3', 'fee', `Rs. ${fee}/-`),
+                    createItemWithClassNameAndInnerText('hr', 'separator'),
+                    createItemWithClassNameAndInnerText('h3', 'duration', `${durationDays} days`)
+                )
+            ),
+            appendItems( /** Middle Container */
+                createItemWithClassNameAndInnerText('div', 'course-middle-container'),
+                appendItems(
+                    createItemWithClassNameAndInnerText('div', 'prerequisites-area'),
+                    createItemWithClassNameAndInnerText('h4', 'title', 'Prerequisites'),
+                    appendItems(
+                        document.createElement('ul'),
+                        ...(prerequisites === null ? ['N/A'] : prerequisites).map(x => {
+                            const li = document.createElement('li');
+                            li.innerText = x
+                            return li
+                        })
+                    )
+                ),
+                appendItems(
+                    createItemWithClassNameAndInnerText('div', 'discounts-area'),
+                    createItemWithClassNameAndInnerText('h4', 'title', 'Discount'),
+                    appendItems(
+                        createItemWithClassNameAndInnerText('div', 'display-pad'),
+                        createItemWithClassNameAndInnerText('div', 'inc-btn', '+'),
+                        createItemWithClassNameAndInnerText('span', 'discount-percentage', '0%'),
+                        createItemWithClassNameAndInnerText('div', 'dec-btn', '-')
+                    )
+                )
+            ),
+            appendItems(
+                createItemWithClassNameAndInnerText('div', 'footer'),
+                appendItems(
+                    createItemWithClassNameAndInnerText('div', 'contents-container'),
+                    createItemWithClassNameAndInnerText('h4', 'title', 'Contents'),
+                    appendItems(
+                        document.createElement('ul'),
+                        ...courseContents.map(x => {
+                            const li = document.createElement('li');
+                            li.innerText = x
+                            return li
+                        })
+                    )
+                ),
+                appendItems(
+                    createItemWithClassNameAndInnerText('div', 'projects-container'),
+                    createItemWithClassNameAndInnerText('h4', 'title', 'Projects'),
+                    appendItems(
+                        document.createElement('ul'),
+                        ...(projectsList === null ? ['N/A'] : projectsList).map(x => {
+                            const li = document.createElement('li');
+                            li.innerText = x
+                            return li
+                        })
+                    )
+                )
+            )
+        );
+
+        course.querySelector('.inc-btn').addEventListener('click', e => {
+            let oldPercentage = parseInt(course.querySelector('.discount-percentage').innerText.replace('%', ''));
+            if (oldPercentage <= 99) {
+                oldPercentage++;
+            }
+            course.querySelector('.discount-percentage').innerText = `${oldPercentage}%`;
+            course.querySelector('.fee').innerText = `Rs. ${Math.floor(fee - (oldPercentage / 100 * fee))}/-`;
+        });
+
+        course.querySelector('.dec-btn').addEventListener('click', e => {
+            let oldPercentage = parseInt(course.querySelector('.discount-percentage').innerText.replace('%', ''));
+            if (oldPercentage >= 1) {
+                oldPercentage--;
+            }
+            course.querySelector('.discount-percentage').innerText = `${oldPercentage}%`;
+            course.querySelector('.fee').innerText = `Rs. ${Math.floor(fee - (oldPercentage / 100 * fee))}/-`;
+        });
+
+        return course;
+    }
+
+    [
+        {
+            categoryTitle: 'Web Development',
+            courses: [
                 {
-                    type: 'file',
-                    name: 'Twilight.mp4'
+                    courseTitle: 'Web Basic',
+                    fee: 3499,
+                    durationDays: 45,
+                    prerequisites: [ 'Basic Computer Knowledge' ],
+                    courseContents: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery'],
+                    projectsList: [
+                        'LUDO',
+                        'Facebook Front Page',
+                        'Calculator',
+                        'Jazz Menu',
+                        'Tik Tac Toe',
+                    ]
                 },
                 {
-                    type: 'file',
-                    name: 'sonic.exe'
+                    courseTitle: ' Web Intermediate(PHP)',
+                    fee: 3999,
+                    durationDays: 30,
+                    prerequisites: [ 'Web Basic Course' ],
+                    courseContents: [
+                        'PHP 5.0 (Procedural)',
+                        'MySQL'
+                    ],
+                    projectsList: [
+                        'Phone Directory',
+                        'General Store Inventory System',
+                    ]
                 },
                 {
-                    type: 'file',
-                    name: 'backtrack.iso'
+                    courseTitle: 'Web Advance (PHP OOP)',
+                    fee: 4999,
+                    durationDays: 45,
+                    prerequisites: [ 'Web Basic Course' ],
+                    courseContents: [
+                        'PHP 5.0 & 7.3 (OOP)',
+                        'MySQL',
+                    ],
+                    projectsList: [
+                        'Employees Record',
+                        'Phone Directory',
+                        'Examination System',
+                    ]
                 },
                 {
-                    type: 'file',
-                    name: 'manjaro.iso'
+                    courseTitle: 'PHP Full Stack For Beginners',
+                    fee: 6999,
+                    durationDays: 75,
+                    prerequisites: null,
+                    courseContents: [
+                        'HTML',
+                        'CSS',
+                        'Bootstrap',
+                        'JavaScript',
+                        'jQuery',
+                        'PHP 5.0 (PROCEDURAL)',
+                        'MySQL',
+                        'Composer',
+                    ],
+                    projectsList: [
+                        'Chess/Ludo',
+                        'Reddit Registration Page',
+                        'Guess the Number Game.',
+                        'Math Game',
+                        'Tik Tac Toe Game.',
+                        'Attendance Management System.',
+                        'Auction System.',
+                    ]
+                },
+                {
+                    courseTitle: 'PHP Full Stack Advance',
+                    fee: 8499,
+                    durationDays: 75,
+                    prerequisites: null,
+                    courseContents: [
+                        'HTML',
+                        'CSS',
+                        'Bootstrap',
+                        'JavaScript',
+                        'jQuery',
+                        'PHP 5.0 & 7.3 (OOP)',
+                        'MySQL',
+                        'Composer',
+                        'Api\'s Development',
+                    ],
+                    projectsList: [
+                        'Chess/Ludo',
+                        'Reddit Registration Page',
+                        'Guess The Number Game',
+                        'Nested Directory Listing',
+                        'Math Game',
+                        'Tik Tac Toe',
+                        'Attendance Management System',
+                        'Auction System',
+                        'X/Y Bank System.',
+                    ]
+                },
+                {
+                    courseTitle: 'API\'s Development (PHP)',
+                    fee: 2499,
+                    durationDays: 30,
+                    prerequisites: ['Basic Programming Knowledge'],
+                    courseContents: [
+                        'Headers',
+                        'JSON',
+                        'XML',
+                        'Rest Api\'s',
+                        'MySQL',
+                    ],
+                    projectsList: [
+                        'X/Y Banking System',
+                    ]
+                },
+                {
+                    courseTitle: 'Web Advance (Node.JS)',
+                    fee: 5999,
+                    durationDays: 45,
+                    prerequisites: ['Web Basic Course'],
+                    courseContents: [
+                        'Express',
+                        'EJS',
+                        'API\'s',
+                        'MongoDB',
+                        'Mongoose',
+                    ],
+                    projectsList: [
+                        'Employees Record',
+                        'Phone Directory',
+                        'Examination System',
+                    ]
+                },
+                {
+                    courseTitle: 'Full Stack Web Developer (Node.JS)',
+                    fee: 8999,
+                    durationDays: 75,
+                    prerequisites: null,
+                    courseContents: [
+                        'HTML',
+                        'CSS',
+                        'Bootstrap',
+                        'JavaScript',
+                        'jQuery',
+                        'Node.JS',
+                        'Express',
+                        'EJS',
+                        'Rest API\'s',
+                        'MongoDB',
+                        'Mongoose',
+                    ],
+                    projectsList: [
+                        'Chess/Ludo',
+                        'Reddit Registration Page',
+                        'Guess The Number Game',
+                        'Nested Directory Listing',
+                        'Math Game',
+                        'Tik Tac Toe Game',
+                        'Attendance Management System',
+                        'Auction System',
+                        'X/Y Banking System',
+                    ]
+                },
+                {
+                    courseTitle: 'React JS Basic',
+                    fee: 5999,
+                    durationDays: 30,
+                    prerequisites: ['Web Basic Course'],
+                    courseContents: [
+                        'Node.JS',
+                        'NPM',
+                        'YARN',
+                        'JSX',
+                        'SASS',
+                        'Components',
+                        'State',
+                        'API\'s Calling',
+                    ],
+                    projectsList: [
+                        'Guess The Number Game',
+                        'Nested Directory Listing',
+                        'Calculator',
+                        'Tik Tac Toe',
+                        'Mini Chat Bot',
+                        'MemoPad',
+                    ]
+                },
+                {
+                    courseTitle: 'React JS Advance',
+                    fee: 7499,
+                    durationDays: 45,
+                    prerequisites: ['Web Basic Course'],
+                    courseContents: [
+                        'Node.JS',
+                        'NPM',
+                        'YARN',
+                        'JSX',
+                        'SASS',
+                        'Components',
+                        'State',
+                        'API\'s Calling',
+                        'Redux',
+                        'Navigation/Router',
+                    ],
+                    projectsList: [
+                        'Guess The Number Game',
+                        'Nested Directory Listing',
+                        'Calculator',
+                        'Tik Tac Toe',
+                        'Automated Chat Bot',
+                        'X/Y Banking System',
+                        'Evernote',
+                    ]
                 }
             ]
-        };
-    
-        const createItem = ({type='dir', name='Hello, World', content=null, onClick=null}) => {
-            const div = document.createElement('div');
-            div.classList.add('item');
+        },
+        {
+            categoryTitle: 'Android Development',
+            courses: [
+                {
+                    courseTitle: 'Android App Development For Beginners (JAVA)',
+                    fee: 5999,
+                    durationDays: 45,
+                    prerequisites: null,
+                    courseContents: [
+                        'Android Studio',
+                        'XML',
+                        'Lambda Expressions',
+                        'Layouts',
+                        'Data Binding',
+                        'View Binding',
+                        'Activities',
+                        'Intents',
+                        'Shared Preferences',
+                        'SQLite',
+                    ],
+                    projectsList: [
+                        'Counter App',
+                        'Guess The Number Game.',
+                        'Piano App.',
+                        'Tik Tac Toe',
+                        'Calculator',
+                        'ATM Machine',
+                        'Automated Chat Bot',
+                        'Library Management System',
+                    ]
+                },
+                {
+                    courseTitle: 'Advance Android Developer (Java)',
+                    fee: 7999,
+                    durationDays: 60,
+                    prerequisites: null,
+                    courseContents: [
+                        'Android Studio',
+                        'XML',
+                        'Lambda Expressions',
+                        'Layouts',
+                        'Data Binding',
+                        'View Binding',
+                        'Activities',
+                        'Fragments',
+                        'Navigation Components',
+                        'Intents',
+                        'Shared Preferences',
+                        'SQLite',
+                        'Firebase',
+                        'Room Database',
+                        'Retrofit',
+                        'MVVM',
+                        'Hilt',
+                    ],
+                    projectsList: [
+                        'Counter App',
+                        'Guess The Number Game.',
+                        'Piano App.',
+                        'Tik Tac Toe',
+                        'Calculator',
+                        'ATM Machine',
+                        'Automated Chat Bot',
+                        'Credit Book App',
+                        'X/Y Banking System',
+                        'Group Chat',
+                    ]
+                },
+                {
+                    courseTitle: 'Android App Development For Beginners (Kotlin)',
+                    fee: 5999,
+                    durationDays: 45,
+                    prerequisites: null,
+                    courseContents: [
+                        'Android Studio',
+                        'XML',
+                        'Layouts',
+                        'Data Binding',
+                        'View Binding',
+                        'Activities',
+                        'Intents',
+                        'Shared Preferences',
+                        'SQLite',
+                    ],
+                    projectsList: [
+                        'Counter App',
+                        'Guess The Number Game.',
+                        'Piano App.',
+                        'Tik Tac Toe',
+                        'Calculator',
+                        'ATM Machine',
+                        'Automated Chat Bot',
+                        'Library Management System',
+                    ]
+                },
+                {
+                    courseTitle: 'Ultimate Android App Development (Kotlin)',
+                    fee: 8499,
+                    durationDays: 90,
+                    prerequisites: null,
+                    courseContents: [
+                        'Android Studio',
+                        'XML',
+                        'Layouts',
+                        'Data Binding',
+                        'View Binding',
+                        'Activities',
+                        'Fragments',
+                        'Navigation Components',
+                        'Intents',
+                        'Shared Preferences',
+                        'SQLite',
+                        'Firebase',
+                        'Room Database',
+                        'Retrofit',
+                        'MVVM',
+                        'Hilt',
+                        'RxJava',
+                        'Dependency Injection',
+                        'Git/GitHub',
+                    ],
+                    projectsList: [
+                        'Counter App',
+                        'Guess The Number Game.',
+                        'Piano App.',
+                        'Torch App.',
+                        'Tik Tac Toe',
+                        'Calculator',
+                        'ATM Machine',
+                        'Automated Chat Bot',
+                        'Credit Book App',
+                        'X/Y Banking System',
+                        'Group Chat',
+                        'Auction System',
+                    ]
+                },
+            ]
+        },
+        {
+            categoryTitle: 'Linux',
+            courses: [
+                {
+                    courseTitle: 'Linux Basic (Ubuntu/Kali/Manjaro)',
+                    fee: 2499,
+                    durationDays: 21,
+                    prerequisites: ['Basic Computer Knowledge'],
+                    courseContents: [
+                        'Creating Linux Bootable USB',
+                        'Linux Installation',
+                        'Basic Usage',
+                        'Programs Installations',
+                        'Terminal',
+                    ],
+                    projectsList: null
+                },
+                {
+                    courseTitle: 'Linux Advance (Ubuntu/Kali/Manjaro)',
+                    fee: 3999,
+                    durationDays: 30,
+                    prerequisites: ['Basic Computer Knowledge'],
+                    courseContents: [
+                        'Creating Bootable Device',
+                        'Linux Installations',
+                        'Basic Usage',
+                        'Gnome/KDE/XFCE DE',
+                        'Package Managers (Pacman/Apt)',
+                        'Repositories',
+                        'Programs Installations',
+                        'Linux Kernel',
+                        'Terminal',
+                        'sh/ksh/zsh/Bash',
+                        'FileSystem',
+                        'Mounting/Unmounting',
+                        'Shell Scripting',
+                        'Cron Jobs',
+                    ],
+                    projectsList: null
+                },
+            ]
+        },
+        {
+            categoryTitle: 'Git/GitHub',
+            courses: [
+                {
+                    courseTitle: 'Git & GitHub Course',
+                    fee: 1999,
+                    durationDays: 14,
+                    prerequisites: ['Basic Computer Knowledge'],
+                    courseContents: [
+                        'Git Bash',
+                        'Command Line',
+                        'Cygwin',
+                        'Configuring SSH',
+                        'Creating Repositories',
+                        'Cloning Repositories',
+                        'Push/Pull commits',
+                        'Working With Branches.',
+                        'Resolving Conflicts.',
+                        'Working with README files.',
+                        'Deploying static websites.',
+                    ],
+                    projectsList: null
+                },
+            ]
+        },
+        {
+            categoryTitle: 'Programming',
+            courses: [
+                {
+                    courseTitle: 'Java',
+                    fee: 2999,
+                    durationDays: 30,
+                    prerequisites: ['Basic Computer Knowledge'],
+                    courseContents: [
+                        'DataTypes',
+                        'Variables',
+                        'Methods',
+                        'Conditional Statements',
+                        'Switch',
+                        'Run Time Arguments',
+                        'Loops',
+                        'Classes/Objects',
+                        'Interfaces',
+                        'Enumeration',
+                        'Abstract Classes',
+                        'Abstraction',
+                        'Polymorphism',
+                        'Encapsulation',
+                        'Inheritance',
+                    ],
+                    projectsList: [
+                        'Guess The Number Game.',
+                        'Calculator',
+                        'Books Library',
+                        'ATM Machine',
+                    ]
+                },
+                {
+                    courseTitle: 'Kotlin',
+                    fee: 3499,
+                    durationDays: 30,
+                    prerequisites: ['Basic Computer Knowledge'],
+                    courseContents: [
+                        'DataTypes',
+                        'Variables',
+                        'Methods',
+                        'Conditional Statements',
+                        'Switch',
+                        'Run Time Arguments',
+                        'Classes/Objects',
+                        'Interfaces',
+                        'Trailing Lambda',
+                        'Loops',
+                        'Enumeration',
+                        'Abstract Classes',
+                        'Abstraction',
+                        'Polymorphism',
+                        'Encapsulation',
+                        'Inheritance',
+                    ],
+                    projectsList: [
+                        'Guess The Number Game.',
+                        'Calculator',
+                        'Books Library',
+                        'ATM Machine',
+                    ]
+                },
+                {
+                    courseTitle: 'C',
+                    fee: 1999,
+                    durationDays: 30,
+                    prerequisites: ['Basic Computer Knowledge'],
+                    courseContents: [
+                        'DataTypes',
+                        'Variables',
+                        'Functions',
+                        'Conditional Statements',
+                        'Loops',
+                        'Switch',
+                        'File Handling',
+                    ],
+                    projectsList: [
+                        'Guess The Number Game.',
+                        'Calculator',
+                        'Books Library',
+                        'ATM Machine',
+                    ]
+                },
+                {
+                    courseTitle: 'C++ For Beginners (PROCEDURAL)',
+                    fee: 1999,
+                    durationDays: 30,
+                    prerequisites: ['Basic Computer Knowledge'],
+                    courseContents: [
+                        'DataTypes',
+                        'Variables',
+                        'Functions',
+                        'Conditional Statements',
+                        'Switch',
+                        'Loops',
+                    ],
+                    projectsList: [
+                        'Guess The Number Game.',
+                        'Calculator',
+                        'Books Library',
+                        'ATM Machine',
+                    ]
+                },
+                {
+                    courseTitle: 'C++ Object Oriented',
+                    fee: 2999,
+                    durationDays: 30,
+                    prerequisites: ['Basic Computer Knowledge'],
+                    courseContents: [
+                        'DataTypes',
+                        'Variables',
+                        'Functions',
+                        'Conditional Statements',
+                        'Switch',
+                        'Loops',
+                        'Classes/Objects',
+                        'OOP Pillars',
+                    ],
+                    projectsList: [
+                        'Guess The Number Game.',
+                        'Calculator',
+                        'Books Library',
+                        'ATM Machine',
+                    ]
+                },
+                {
+                    courseTitle: 'Python For Beginners (Procedural)',
+                    fee: 3999,
+                    durationDays: 30,
+                    prerequisites: ['Basic Computer Knowledge'],
+                    courseContents: [
+                        'DataTypes',
+                        'Variables',
+                        'Methods',
+                        'Conditional Statements',
+                        'Loops',
+                        'Lists',
+                        'Dictionaries',
+                        'pip',
+                        'Jupyter Notebooks',
+                        'lambda',
+                        'map/filter',
+                    ],
+                    projectsList: [
+                        'Guess The Number Game.',
+                        'Calculator',
+                        'Books Library',
+                        'ATM Machine',
+                    ]
+                },
+                {
+                    courseTitle: 'Python Advance (OOP)',
+                    fee: 4499,
+                    durationDays: 40,
+                    prerequisites: ['Basic Computer Knowledge'],
+                    courseContents: [
+                        'DataTypes',
+                        'Variables',
+                        'Methods',
+                        'Conditional Statements',
+                        'Run Time Arguments',
+                        'Loops',
+                        'Classes/Objects',
+                        'OOP Pillars',
+                        'Abstraction',
+                        'Polymorphism',
+                        'Encapsulation',
+                        'Inheritance',
+                        'Lists',
+                        'Dictionaries',
+                        'pip',
+                        'lambda',
+                        'map/filter',
+                        'Jupyter Notebooks',
+                    ],
+                    projectsList: [
+                        'Guess The Number Game.',
+                        'Calculator',
+                        'Books Library',
+                        'ATM Machine',
+                    ]
+                },
+            ]
+        },
+        {
+            categoryTitle: 'Free Courses',
+            courses: [
+                {
+                    courseTitle: 'Basic Computer Training',
+                    fee: 0,
+                    durationDays: 30,
+                    prerequisites: null,
+                    courseContents: [
+                        'Windows Installation (XP,7,8,10,11)',
+                        'Driver Installation',
+                        'Basic Usage',
+                        'Multimedia Apps Installation',
+                        'Antivirus Installation',
+                        'Typing Master Installation',
+                        'Games Installation',
+                        'Disk Partitioning',
+                        'Disk Management',
+                        'Word',
+                        'Paint',
+                        'Notepad',
+                        'Directories/File Handling',
+                        'Virtual Box',
+                    ],
+                    projectsList: null
+                },
+                {
+                    courseTitle: 'Typing (English/Urdu)',
+                    fee: 0,
+                    durationDays: 40,
+                    prerequisites: null,
+                    courseContents: [
+                        'Inpage',
+                        'Typing Master',
+                    ],
+                    projectsList: null
+                },
+            ]
+        },
+        {
+            categoryTitle: 'Computer Applications',
+            courses: [
+                {
+                    courseTitle: 'Computer Applications',
+                    fee: 2499,
+                    durationDays: 30,
+                    prerequisites: ['Basic Computer Knowledge'],
+                    courseContents: [
+                        'Microsoft Office Word',
+                        'Microsoft Office Excel',
+                        'Microsoft Office Power Point',
+                        'Inpage',
+                        'Gmail/Outlook',
+                        'Web Surfing',
+                        'Google Chrome/Firefox',
+                        'Facebook/Twitter/Instagram',
+                    ],
+                    projectsList: null
+                },
+            ]
+        },
+    ].map(category => appendItems(
+        createItemWithClassNameAndInnerText('div', 'courses-container'),
+        createItemWithClassNameAndInnerText('h2', 'category-title', category.categoryTitle),
+        appendItems(
+            createItemWithClassNameAndInnerText('div', 'courses'),
+            ...category.courses.map(course => courseCreator({...course}))
+        )
+    )).forEach(container => {
+        coursesWareHouse.appendChild(container);
+    });
 
-            if (type === 'dir' || type === '..') {
-                div.classList.add('selectable');
+    for (let i = 0; i < 15; i++) {
+        coursesWareHouse.lastChild.appendChild(document.createElement('br'));
+    }
+
+    const coursesContainers = document.querySelectorAll('.courses-container');
+
+    const createNavItem = (title, element, isLast=false) => {
+        const navItem = document.createElement('div');
+        if (!isLast) navItem.classList.add('bottom-border');
+        navItem.innerText = title;
+        navItem.addEventListener('click', e => {
+            coursesWareHouse.scroll({ top: element.offsetTop, behavior: 'smooth'});
+            if (!navItem.classList.contains('active')) {
+                sideNav.querySelectorAll('div').forEach((e, i) => {
+                    e.classList.remove('active');
+                })
+                navItem.classList.add('active');
             }
+        });
+        return navItem;
+    }
 
-            const img = document.createElement('img');
-            img.classList.add(type === 'dir' ? 'dir-img' : 'img');
-            img.src = (type === '..' && 'back.png') || `${type === 'file' ? 'file-md' : 'folder-lg'}.svg`;
+    for (let i = 0; i < coursesContainers.length; i++) {
+        sideNav.appendChild(createNavItem(
+            coursesContainers[i].querySelector('.category-title').innerHTML,
+            coursesContainers[i],
+            i === coursesContainers.length - 1
+        ));
+    }
 
-            const p = document.createElement('p');
-            p.innerText = name;
-            p.classList.add('name');
+    const sideNavItems = sideNav.querySelectorAll('div');
+    sideNavItems[0].classList.add('active');
 
-            div.appendChild(img);
-            div.appendChild(p);
+    const coursesContainersBoundaries = [];
 
-            if (onClick !== null) {
-                div.addEventListener('click', onClick);
-            }
+    coursesContainers.forEach(c => {
+        coursesContainersBoundaries.push({top: c.getBoundingClientRect().top, bottom: c.getBoundingClientRect().bottom});
+    });
 
-            return div;
-        }
-        
-        let stack = [];
-        
-        const render = () => {
-            document.querySelector('.listing-trail').innerHTML = `/${stack.map(item => item.name).join('/')}`;
-            let contentContainer = document.querySelector('.dir-contents-container');
-            contentContainer.innerHTML = '';
-
-            stack.length && contentContainer.appendChild(createItem({
-                type: '..',
-                name: '..',
-                onClick: () => {
-                    stack.pop();
-                    render();
+    coursesWareHouse.addEventListener('scroll', e => {
+        for (let i = 0; i < coursesContainers.length; i++) {
+            if (coursesWareHouse.scrollTop + 10 >= coursesContainersBoundaries[i].top && coursesWareHouse.scrollTop + 10 <= coursesContainersBoundaries[i].bottom) {
+                if (!sideNavItems[i].classList.contains('active')) {
+                    sideNavItems.forEach((e, i) => {
+                        e.classList.remove('active');
+                    })
+                    sideNavItems[i].classList.add('active');
                 }
-            }));
-
-            (stack.length === 0 ? volumeMeta : stack[stack.length - 1]).content.forEach(item => {
-                contentContainer.appendChild(createItem({
-                    ...item,
-                    onClick: item.type === 'file' ? null : () => {
-                        stack.push(item);
-                        render();
-                    }
-                }));
-            });
+                break;
+            }
         }
-        
-        render();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  </body>
+    });
+</script>
 </html>

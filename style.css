@@ -11,38 +11,199 @@ body {
   height: 100vh;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 100%;
-}
-
-.dir-contents-container {
+.main-page {
   display: flex;
 }
-.dir-contents-container .item {
-  margin: 8px;
-  padding: 8px;
+.main-page .side-nav {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+.main-page .side-nav div {
+  flex: 1;
+  background: #4b00ff;
+  text-transform: uppercase;
+  display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(75, 0, 0, 0.425);
-  border: 1px solid red;
+  padding-left: 16px;
+  padding-right: 16px;
 }
-.dir-contents-container .item.selectable:hover {
+.main-page .side-nav div.active {
+  background: #7d00ff;
+}
+.main-page .side-nav div:hover {
+  background: #6400ff;
   cursor: pointer;
 }
-.dir-contents-container .item .dir-img {
-  width: 64px;
+.main-page .side-nav .bottom-border {
+  border-bottom: 1px solid #3200ff;
 }
-.dir-contents-container .item .img {
-  width: 64px;
+.main-page .courses-warehouse {
+  flex: 1;
+  overflow-y: scroll;
+  height: 100vh;
 }
-.dir-contents-container .item .name {
+.main-page .courses-warehouse .courses-container {
+  background: black;
+  padding: 16px;
+}
+.main-page .courses-warehouse .courses-container .category-title {
+  text-align: center;
+  text-transform: uppercase;
+}
+.main-page .courses-warehouse .courses-container .courses {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.main-page .courses-warehouse .courses-container .courses .course {
+  margin-top: 20px;
+}
+.main-page .courses-warehouse .courses-container .courses .course .head {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #7d00ff;
+  padding: 16px;
+}
+.main-page .courses-warehouse .courses-container .courses .course .head .course-title {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee {
+  display: flex;
+  flex-direction: column;
+  height: 90px;
+  padding: 8px;
+  background: #3200ff;
+  align-items: center;
+}
+.main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .fee {
   margin: 0;
+  color: white;
+  font-family: "Fira Code", monospace;
+}
+.main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .separator {
+  height: 1px;
+  width: 100%;
+  margin: 0;
+}
+.main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .duration {
+  margin: 0;
+  color: white;
+  font-family: "Fira Code", monospace;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background: #6400ff;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .prerequisites-area .title {
+  color: khaki;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .prerequisites-area ul {
+  margin: 0;
+  color: white;
+  font-family: "Fira Code", monospace;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area {
+  background: #3200ff;
+  padding: 16px;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .title {
+  color: khaki;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad * {
+  flex: 1;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad .inc-btn, .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad .dec-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  font-family: "Fira Code", monospace;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad .inc-btn:hover, .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad .dec-btn:hover {
+  cursor: pointer;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad .inc-btn {
+  background: limegreen;
+  border: 1px solid black;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad .inc-btn:hover {
+  background: #3caf3c;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad .dec-btn {
+  background: red;
+  border: 1px solid black;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad .dec-btn:hover {
+  background: #ee1b1b;
+}
+.main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad .discount-percentage {
+  text-align: center;
+  font-family: "Fira Code", monospace;
+  font-size: 1.5rem;
+  cursor: default;
+}
+.main-page .courses-warehouse .courses-container .courses .course .footer {
+  display: flex;
+}
+.main-page .courses-warehouse .courses-container .courses .course .footer .contents-container {
+  background: #4b00ff;
+  border-bottom-left-radius: 10px;
+  flex: 1;
+  padding: 16px;
+}
+.main-page .courses-warehouse .courses-container .courses .course .footer .contents-container .title {
+  color: khaki;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.main-page .courses-warehouse .courses-container .courses .course .footer .contents-container ul {
+  margin: 0;
+  color: white;
+  font-family: "Fira Code", monospace;
+}
+.main-page .courses-warehouse .courses-container .courses .course .footer .projects-container {
+  background: #3200ff;
+  padding: 16px;
+  flex: 1;
+  border-bottom-right-radius: 10px;
+}
+.main-page .courses-warehouse .courses-container .courses .course .footer .projects-container .title {
+  color: khaki;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.main-page .courses-warehouse .courses-container .courses .course .footer .projects-container ul {
+  margin: 0;
+  color: white;
+  font-family: "Fira Code", monospace;
 }
 
 .text-green {

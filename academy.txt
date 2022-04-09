@@ -1,0 +1,346 @@
+Web Development:
+	+-----------------------------------------------------------------------------------------------------------------	7:00 to 8:00
+	| Web Basic:                                                                                  (45 days) (3499/-)
+	|
+        | HTML (7), CSS (10), BOOTSTRAP (5), JAVASCRIPT (20), JQUERY (1)
+	| 
+	| PROJECTS:
+	| 	1. LUDO (HTML/CSS)
+	| 	2. FACEBOOK FRONT PAGE (BOOTSTRAP)
+	|       3. CALCULATOR
+	| 	4. JAZZ MENU
+	|       5. TIK TAC TOE
+	
+	+-----------------------------------------------------------------------------------------------------------------	8:15 to 9:15
+	| Web Intermediate (PHP):                                                  (30 days) (3999/-), requires web basic
+	|
+	| PHP 5.0 (PROCEDURAL) (12), MYSQL (7)
+	| 
+	| PROJECTS:
+	|	1. Phone Directory.
+	|	2. INVENTORY SYSTEM(General Store System).
+	
+	+-----------------------------------------------------------------------------------------------------------------	9:30 to 10:30
+	| Web Advance (PHP OOP):                                                   (45 days) (4999/-), requires web basic
+	|
+	| PHP 5.0 & 7.3 (PROCEDURAL / OOP) (23), MYSQL (7)
+	|
+	| PROJECTS:
+	|	1. Employees Record.
+	|	2. Phone Directory.
+	|	3. Examination System.
+
+	------------------------------------------------------------------------------------------------------------------	10:45 to 11:45
+	| PHP Full Stack Web Developer Course For Begginers: 	    					 (75 days) (6999/-)
+	|
+	| HTML (7), CSS (10), BOOTSTRAP (5), JAVASCRIPT (20), JQUERY (1), PHP 5.0 (PROCEDURAL) (12), MYSQL (7), COMPOSER
+	|
+	| PROJECTS:
+	| 	1. Chess/Ludo (HTML/CSS)
+	| 	2. Reddit SignUp PAGE (BOOTSTRAP)
+	|       3. Guess The Number Game.
+	| 	4. Math Game.
+	|       5. Tik Tac Toe.
+	|	6. Attendence System.
+	| 	7. Auction System.
+
+	------------------------------------------------------------------------------------------------------------------	12:00 to 01:30
+	| Advance PHP Full Stack Web Developer Course: 	    					       (75 days) (8499/-)
+	|
+        | HTML (7), CSS (10), BOOTSTRAP (5), JAVASCRIPT (20), JQUERY (1), PHP 5.0 & 7.3 (PROCEDURAL / OOP) (23), 
+	| MYSQL (7), COMPOSER, API Development
+	|
+	| PROJECTS:
+	| 	1. Chess/Ludo (HTML/CSS)
+	| 	2. Reddit SignUp PAGE (BOOTSTRAP)
+	|       3. Guess The Number Game.
+	|	4. Nested Directory Listing
+	| 	5. Math Game.
+	|       6. Tik Tac Toe.
+	|	7. Attendence System.
+	| 	8. Auction System.
+	|	9. UBL/HBL Bank System.
+
+	------------------------------------------------------------------------------------------------------------------	2:30 to 3:30
+	| API's Development in PHP: 					(30 days) (2499/-), requires programming knowledge.
+	|
+	| PROJECTS:
+	|	1. UBL/HBL Bank System.
+	
+	------------------------------------------------------------------------------------------------------------------	3:45 to 4:45
+	| Web Advance (Node.JS): 			                          (45 days) (5999/-), requires web basic
+	|
+	| Express, EJS, API's, MongoDB, Mongoose
+	| 
+	| PROJECTS:
+	|	1. Employees Record.
+	|	2. Phone Directory.
+	|	3. Examination System.
+	
+	------------------------------------------------------------------------------------------------------------------	4:45 to 5:45
+	| Complete Full Stack Web Developer Course Node.JS:  	    					(75 days) (8999/-)
+	|
+        | HTML (7), CSS (10), BOOTSTRAP (5), JAVASCRIPT (20), JQUERY (1), NODE.JS, EXPRESS, EJS, API's, MongoDB, Mongoose
+	| 
+	| PROJECTS:
+	| 	1. Chess/Ludo (HTML/CSS)
+	| 	2. Reddit SignUp PAGE (BOOTSTRAP)
+	|       3. Guess The Number Game.
+	|	4. Nested Directory Listing
+	| 	5. Math Game.
+	|       6. Tik Tac Toe.
+	|	7. Attendence System.
+	| 	8. Auction System.
+	|	9. UBL/HBL Bank System.
+	
+	------------------------------------------------------------------------------------------------------------------	6:00 to 7:00
+	| React JS Basic:                             				    (30 days) (5999/-), requires web basic
+	|
+	| JSX, COMPONENTS, STATE, API CALLING
+	|
+	| PROJECTS:
+	| 	1. Guess The Number Game.
+	|	2. Nested Directory Listing
+	| 	3. CALCULATOR.
+	|	4. TIK TAC TOE.
+	| 	5. Mini Chat Bot.
+	|	6. MemoPad
+	
+	------------------------------------------------------------------------------------------------------------------	7:15 to 8:15
+	| React JS Advance: 			    				    (45 days) (7499/-), requires web basic
+	|
+	| JSX, COMPONENTS, STATE, API CALLING, REDUX, REACT ROUTER
+	|
+	| PROJECTS:
+	| 	1. Guess The Number Game.
+	|	2. Nested Directory Listing
+	| 	3. CALCULATOR.
+	|	4. TIK TAC TOE.
+	| 	5. Automated Chat Bot.
+	|	6. UBL/HBL Bank System.
+	| 	7. Evernote 
+
+Linux:
+	------------------------------------------------------------------------------------------------------------------
+	| Linux Basic (Ubuntu/Kali/Manjaro):                                                           (21 days) (2499/-)
+	|
+	| INSTALLATION, BASIC USAGE, TERMINAL
+	|
+	
+	------------------------------------------------------------------------------------------------------------------
+	| Linux Advance (Ubuntu/Kali/Manjaro):                                                         (30 days) (3999/-)
+	|
+	| INSTALLATION, BASIC USAGE, TERMINAL, SHELL SCRIPTING, CRON.D
+	|
+
+Git:
+	------------------------------------------------------------------------------------------------------------------
+	| git/github				                                                           (14 days) (1999/-)
+	|
+	
+
+Programming Language Crash Courses:
+	------------------------------------------------------------------------------------------------------------------
+	| Java					     		         				 (30 days) (2999/-)
+	|
+	| DataTypes, Variables, functions, if else, switch, ternary, OOP
+	|
+	| Projects:
+	| 	1. Guess The Number Game.
+	| 	2. Calculator.
+	| 	3. Book Library.
+	| 	4. ATM Machine.
+	
+	------------------------------------------------------------------------------------------------------------------
+	| Kotlin					                                                (30 days) (3499/-)
+	|
+	| DataTypes, Variables, functions, if else, switch, ternary, OOP
+	|
+	| 	1. Guess The Number Game.
+	| 	2. Calculator.
+	| 	3. Book Library.
+	| 	4. ATM Machine.
+
+	------------------------------------------------------------------------------------------------------------------
+	| C					                                                        (30 days) (1999/-)
+	|
+	| DataTypes, Variables, functions, if else, switch, ternary
+	|
+	| 	1. Guess The Number Game.
+	| 	2. Calculator.
+	| 	3. Book Library.
+	| 	4. ATM Machine.
+	
+	------------------------------------------------------------------------------------------------------------------
+	| C++ PROCEDURAL				              		 			(30 days) (1999/-)
+	|
+	| DataTypes, Variables, functions, if else, switch, ternary
+	|
+	| 	1. Guess The Number Game.
+	| 	2. Calculator.
+	| 	3. Book Library.
+	| 	4. ATM Machine.
+	
+	------------------------------------------------------------------------------------------------------------------
+	| C++ Object Oriented   		                                                         (30 days) (2999/-)
+	|
+	| DataTypes, Variables, functions, if else, switch, ternary
+	|
+	| 	1. Guess The Number Game.
+	| 	2. Calculator.
+	| 	3. Book Library.
+	| 	4. ATM Machine.
+	
+	------------------------------------------------------------------------------------------------------------------
+	| Python Procedural				                                                  (30 days) (3999/-) 
+	|
+	| DataTypes, Variables, functions, if else, switch, ternary, Lists, Dictionaries, pip, Jupiter Notebooks, anaconda
+	|
+	| 	1. Guess The Number Game.
+	| 	2. Calculator.
+	| 	3. Book Library.
+	| 	4. ATM Machine.
+	
+	------------------------------------------------------------------------------------------------------------------
+	| Python Object Oriented		                                                          (40 days) (4499/-)
+	|
+	| DataTypes, Variables, functions, if else, switch, ternary, Lists, Dictionaries, pip, Jupiter Notebooks, anaconda
+	|
+	| 	1. Guess The Number Game.
+	| 	2. Calculator.
+	| 	3. Book Library.
+	| 	4. ATM Machine.
+	
+Mobile App Development:
+	------------------------------------------------------------------------------------------------------------------
+	| Android app development with Java for begginers: 	                                       (45 days) (5999/-)
+	|
+	| Activities, Java GUIDE
+	|
+	| Projects:
+	| 	1. Counter App.
+	| 	2. Guess The Number Game.
+	| 	3. Tik Tac Toe.
+	| 	4. Calculator.
+	| 	5. ATM Machine.
+	| 	6. Automated Chat Bot.
+	| 	7. Library Management System.
+	
+	------------------------------------------------------------------------------------------------------------------
+	| Full Stack Android app development with Java: 		                               (60 days) (7999/-)
+	|
+	| Activities, Fragments, API's, Retrofit, HITL, MVVM, Navigation
+	|
+	| 	1. Counter App.
+	| 	2. Guess The Number Game.
+	| 	3. Tik Tac Toe.
+	| 	4. Calculator.
+	| 	5. ATM Machine.
+	| 	6. Automated Chat Bot.
+	| 	7. Credit Book App.
+	|	8. UBL/HBL Bank System.
+	| 	9. Group Chat.
+
+	------------------------------------------------------------------------------------------------------------------
+	| Android app development with Kotlin for begginers: 	                                       (45 days) (5999/-)
+	|
+	| Activities, Java GUIDE
+	|
+	| Projects:
+	| 	1. Counter App.
+	| 	2. Guess The Number Game.
+	| 	3. Tik Tac Toe.
+	| 	4. Calculator.
+	| 	5. ATM Machine.
+	| 	6. Automated Chat Bot.
+	| 	7. Library Management System.
+	
+	------------------------------------------------------------------------------------------------------------------
+	| Ultimate Android app development with Kotlin: 		                               (90 days) (8499/-)
+	|
+	| Activities, Fragments, API's, Retrofit, HILT, MVVM, FIREBASE, GIT/GITHUB
+	|
+	| 	1. Counter App.
+	| 	2. Guess The Number Game.
+	| 	3. Tik Tac Toe.
+	| 	4. Calculator.
+	| 	5. ATM Machine.
+	| 	6. Automated Chat Bot.
+	| 	7. Credit Book App.
+	|	8. UBL/HBL Bank System.
+	| 	9. Group Chat.
+
+	
+PUMPHLET:
+
+	KHAN IT CENTER --                 Master the most in-demand skills in today's world
+	
+	BASIC COMPUTER TRAINING (FREE):
+	- Windows Installation/Usage
+	- Driver Installation
+	- Antivirus & Multimedia Apps Installations
+	
+	Typing Course English/Urdu (FREE):
+	- Typing Master Professional
+
+	Computer Applications:
+	- MS OFFICE:
+		- MS WORD
+		- MS EXCEL
+		- MS POWERPOINT
+	- Inpage
+	- GMAIL/OUTLOOK
+	- Facebook/Twitter/Instagram
+	- Google Chrome/Firefox
+
+	Web Designing/Development:
+	   """ Start your carreer in website development, and start earning by website designing and online trading """
+	- HTML5
+	- CSS3
+	- Dreamweaver/PhpStorm/VSCode/Atom
+	- BOOTSTRAP 3, 4, 5
+	- JAVASCRIPT (ES6)
+	- jQuery
+	- PHP 5.0 & 7.4
+	- MySQL 
+	- Composer
+        - NODE.JS 
+	- EXPRESS 
+	- EJS
+	- API's
+	- MongoDB
+	- Mongoose
+	- React.JS	
+	
+	Mobile Application Development:
+	   """ Start your carreer in Android App Development, and start earning by creating mobile applications. """
+	- Android Studio
+	- ADB
+	- JAVA
+	- KOTLIN
+	- XML
+	- Retrofit
+	- Firebase
+	- Dagger/Hilt
+	- MVVM Pattern
+	- Navigation
+
+	Git/GitHub:
+	
+	Programming Languages:
+	- C
+	- C++
+	- Java
+	- Kotlin
+	- Python 3
+
+	Wordpress Web Development:
+	
+	Linux Scripting Courses:
+	- Shell Scripting
+	- Python Scripting	
+
+	Web Scrapping:
+
+	Visit us for enrolling courses and further details at,
+	315 Main Shamshair Town Road Sargodha, Near ILM Girls College.

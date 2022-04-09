@@ -1,67 +1,261 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: #241f1f;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    height: 100vh;
+  background: #241f1f;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
 }
 
-.container {
+$green-layer-one: rgb(125, 0, 255);
+$green-layer-two: rgb(100, 0, 255);
+$green-layer-three: rgb(75, 0, 255);
+$green-layer-four: rgb(50, 0, 255);
+
+.main-page {
+  display: flex;
+
+  .side-nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-}
+    height: 100vh;
+    justify-content: space-between;
 
-.dir-contents-container {
-    display: flex;
+    div {
+      flex: 1;
+      background: $green-layer-three;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left:16px;
+      padding-right:16px;
 
-    .item {
-        margin: 8px;
-        padding: 8px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        // flex: 1;
-        // flex-wrap: wrap;
-        // flex-direction: row;
-        // width: auto;
-        // height: 350px;
-        background: rgba(75, 0, 0, 0.425);
-        border: 1px solid red;
-    
-        &.selectable:hover {
-            cursor: pointer;
-        }
-    
-        .dir-img {
-            width: 64px;
-            // height: 
-        }
-    
-        .img {
-            width: 64px;
-        }
-    
-        .name {
-            margin: 0;
-        }
+      &.active {
+        background: $green-layer-one;
+      }
+
+      &:hover {
+        background: $green-layer-two;
+        cursor: pointer;
+      }
     }
 
+    .bottom-border {
+      border-bottom: 1px solid $green-layer-four;
+    }
+  }
+
+  .courses-warehouse {
+    flex: 1;
+    overflow-y: scroll;
+    height: 100vh;
+
+    .courses-container {
+      background: black;
+      padding: 16px;
+
+      .category-title {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .courses {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .course {
+          margin-top: 20px;
+
+          .head {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: $green-layer-one;
+            padding: 16px;
+
+            .course-title {
+              color: white;
+              text-transform: uppercase;
+              font-size: 2.2rem;
+              font-weight: bold;
+            }
+
+            .duration-and-fee {
+              display: flex;
+              flex-direction: column;
+              height: 90px;
+              padding: 8px;
+              background: $green-layer-four;
+              align-items: center;
+
+              .fee {
+                margin: 0;
+                color: white;
+                font-family: 'Fira Code', monospace;
+              }
+
+              .separator {
+                height: 1px;
+                width: 100%;
+                margin: 0;
+              }
+
+              .duration {
+                margin: 0;
+                color: white;
+                font-family: 'Fira Code', monospace;
+              }
+            }
+
+          }
+
+          .course-middle-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px;
+            background: $green-layer-two;
+
+            .prerequisites-area {
+
+              .title {
+                color: khaki;
+                font-weight: bold;
+                letter-spacing: 0.200em;
+                text-transform: uppercase;
+              }
+
+              ul {
+                margin: 0;
+                color: white;
+                font-family: 'Fira Code', monospace;
+              }
+            }
+
+            .discounts-area {
+              background: $green-layer-four;
+              padding: 16px;
+
+              .title {
+                color: khaki;
+                font-weight: bold;
+                letter-spacing: 0.200em;
+                text-transform: uppercase;
+              }
+
+              .display-pad {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                background: transparent;
+                border: none;
+
+                * {
+                  flex: 1;
+                }
+
+                .inc-btn, .dec-btn {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-size: 1.5rem;
+                  color: white;
+                  font-weight: bold;
+                  font-family: 'Fira Code', monospace;
+
+                  &:hover {
+                    cursor: pointer;
+                  }
+                }
+
+                .inc-btn {
+                  background: limegreen;
+                  border: 1px solid black;
+
+                  &:hover {
+                    background: #3caf3c;
+                  }
+                }
+
+                .dec-btn {
+                  background: red;
+                  border: 1px solid black;
+
+                  &:hover {
+                    background: #ee1b1b;
+                  }
+                }
+
+                .discount-percentage {
+                  text-align: center;
+                  font-family: 'Fira Code', monospace;
+                  font-size: 1.5rem;
+                  cursor: default;
+                }
+              }
+            }
+          }
+
+          .footer {
+            display: flex;
+
+            .contents-container {
+              background: $green-layer-three;
+              border-bottom-left-radius: 10px;
+              flex: 1;
+              padding: 16px;
+              .title {
+                color: khaki;
+                font-weight: bold;
+                letter-spacing: 0.200em;
+                text-transform: uppercase;
+              }
+
+              ul {
+                margin: 0;
+                color: white;
+                font-family: 'Fira Code', monospace;
+              }
+            }
+
+            .projects-container {
+              background: $green-layer-four;
+              padding: 16px;
+              flex: 1;
+              border-bottom-right-radius: 10px;
+
+              .title {
+                color: khaki;
+                font-weight: bold;
+                letter-spacing: 0.200em;
+                text-transform: uppercase;
+              }
+
+              ul {
+                margin: 0;
+                color: white;
+                font-family: 'Fira Code', monospace;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
 }
 
 
 .text-green {
-    color: limegreen;
+  color: limegreen;
 }
 
 .fira-font {
-    font-family: 'Fira Code', monospace;
+  font-family: 'Fira Code', monospace;
 }
