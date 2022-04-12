@@ -19,6 +19,7 @@ body {
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
+  max-width: 30vw;
 }
 .main-page .side-nav div {
   flex: 1;
@@ -29,6 +30,8 @@ body {
   align-items: center;
   padding-left: 16px;
   padding-right: 16px;
+  text-align: center;
+  font-size: 12px;
 }
 .main-page .side-nav div.active {
   background: #7d00ff;
@@ -52,6 +55,7 @@ body {
 .main-page .courses-warehouse .courses-container .category-title {
   text-align: center;
   text-transform: uppercase;
+  font-size: 20px;
 }
 .main-page .courses-warehouse .courses-container .courses {
   display: flex;
@@ -60,6 +64,7 @@ body {
 }
 .main-page .courses-warehouse .courses-container .courses .course {
   margin-top: 20px;
+  max-width: 100%;
 }
 .main-page .courses-warehouse .courses-container .courses .course .head {
   border-top-left-radius: 10px;
@@ -69,22 +74,23 @@ body {
   align-items: center;
   background: #7d00ff;
   padding: 16px;
+  flex-direction: column;
 }
 .main-page .courses-warehouse .courses-container .courses .course .head .course-title {
   color: white;
   text-transform: uppercase;
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 .main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee {
   display: flex;
   flex-direction: column;
-  height: 90px;
   padding: 8px;
   background: #3200ff;
   align-items: center;
 }
 .main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .fee {
+  font-size: 1rem;
   margin: 0;
   color: white;
   font-family: "Fira Code", monospace;
@@ -95,6 +101,7 @@ body {
   margin: 0;
 }
 .main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .duration {
+  font-size: 1rem;
   margin: 0;
   color: white;
   font-family: "Fira Code", monospace;
@@ -102,6 +109,7 @@ body {
 .main-page .courses-warehouse .courses-container .courses .course .course-middle-container {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   padding: 16px;
   background: #6400ff;
 }
@@ -110,11 +118,13 @@ body {
   font-weight: bold;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  font-size: 1.2rem;
 }
 .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .prerequisites-area ul {
   margin: 0;
   color: white;
   font-family: "Fira Code", monospace;
+  font-size: 1rem;
 }
 .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area {
   background: #3200ff;
@@ -125,8 +135,12 @@ body {
   font-weight: bold;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: center;
+  height: 90px;
 }
 .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad {
+  font-size: 1rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -140,7 +154,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: white;
   font-weight: bold;
   font-family: "Fira Code", monospace;
@@ -170,6 +184,7 @@ body {
 }
 .main-page .courses-warehouse .courses-container .courses .course .footer {
   display: flex;
+  flex-direction: column;
 }
 .main-page .courses-warehouse .courses-container .courses .course .footer .contents-container {
   background: #4b00ff;
@@ -212,6 +227,58 @@ body {
 
 .fira-font {
   font-family: "Fira Code", monospace;
+}
+
+@media only screen and (min-width: 680px) {
+  .main-page .side-nav div {
+    font-size: 1rem;
+  }
+  .main-page .courses-warehouse .courses-container .category-title {
+    font-size: 2rem;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .head {
+    flex-direction: row;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .head .course-title {
+    font-size: 1.6rem;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .fee, .main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .duration {
+    font-size: 1.6rem;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container {
+    flex-direction: row;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .footer {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  .main-page .side-nav div {
+    font-size: 1.2rem;
+  }
+  .main-page .courses-warehouse .courses-container .category-title {
+    font-size: 2.4rem;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .head .course-title {
+    font-size: 1.8rem;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .prerequisites-area .title {
+    font-size: 1.6rem;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .prerequisites-area ul {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .main-page .side-nav div {
+    font-size: initial;
+  }
+  .main-page .courses-warehouse .courses-container .category-title {
+    font-size: 2.6rem;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .head .course-title {
+    font-size: 2.2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
