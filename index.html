@@ -15,7 +15,6 @@
 <body>
 
 <div class="main-page">
-<!--    <i class="fa-brands fa-chrome"></i>-->
     <div class="side-nav"></div>
     <div class="courses-warehouse"></div>
 </div>
@@ -142,8 +141,9 @@
         return course;
     }
 
-    [
+    const coursesDetails = [
         {
+            categoryIcon: 'fa-brands fa-chrome',
             categoryTitle: 'Web Development',
             courses: [
                 {
@@ -161,7 +161,7 @@
                     ]
                 },
                 {
-                    courseTitle: ' Web Intermediate(PHP)',
+                    courseTitle: ' Web Intermediate (PHP)',
                     fee: 3999,
                     durationDays: 30,
                     prerequisites: [ 'Web Basic Course' ],
@@ -360,6 +360,7 @@
             ]
         },
         {
+            categoryIcon: 'fa-brands fa-android',
             categoryTitle: 'Android Development',
             courses: [
                 {
@@ -498,6 +499,7 @@
             ]
         },
         {
+            categoryIcon: 'fa-brands fa-linux',
             categoryTitle: 'Linux',
             courses: [
                 {
@@ -540,6 +542,7 @@
             ]
         },
         {
+            categoryIcon: 'fa-brands fa-github',
             categoryTitle: 'Git/GitHub',
             courses: [
                 {
@@ -565,6 +568,7 @@
             ]
         },
         {
+            categoryIcon: 'fa-solid fa-laptop-code',
             categoryTitle: 'Programming',
             courses: [
                 {
@@ -749,6 +753,7 @@
             ]
         },
         {
+            categoryIcon: 'fa-solid fa-flag-checkered',
             categoryTitle: 'Free Courses',
             courses: [
                 {
@@ -788,6 +793,7 @@
             ]
         },
         {
+            categoryIcon: 'fa-solid fa-computer',
             categoryTitle: 'Computer Applications',
             courses: [
                 {
@@ -809,9 +815,19 @@
                 },
             ]
         },
-    ].map(category => appendItems(
+    ];
+
+    coursesDetails.map(category => appendItems(
         createItemWithClassNameAndInnerText('div', 'courses-container'),
-        createItemWithClassNameAndInnerText('h2', 'category-title', category.categoryTitle),
+        appendItems(
+            createItemWithClassNameAndInnerText('div', 'category-title'),
+            (categoryIcon => {
+                const tempItem = document.createElement('i');
+                ['category-icon', ...categoryIcon.split(' ')].forEach(name => tempItem.classList.add(name));
+                return tempItem;
+            })(category.categoryIcon),
+            createItemWithClassNameAndInnerText('h2', 'category-text', category.categoryTitle)
+        ),
         appendItems(
             createItemWithClassNameAndInnerText('div', 'courses'),
             ...category.courses.map(course => courseCreator({...course}))
@@ -826,10 +842,17 @@
 
     const coursesContainers = document.querySelectorAll('.courses-container');
 
-    const createNavItem = (title, element, isLast=false) => {
-        const navItem = document.createElement('div');
+    const createNavItem = (title, iconClasses, element, isLast=false) => {
+        const navItem = appendItems(
+            createItemWithClassNameAndInnerText('div', 'side-nav-item'),
+            (categoryIcon => {
+                const tempItem = document.createElement('i');
+                ['category-icon', ...categoryIcon.split(' ')].forEach(name => tempItem.classList.add(name));
+                return tempItem;
+            })(iconClasses),
+            createItemWithClassNameAndInnerText('h2', 'category-text', title)
+        );
         if (!isLast) navItem.classList.add('bottom-border');
-        navItem.innerText = title;
         navItem.addEventListener('click', e => {
             coursesWareHouse.scroll({ top: element.offsetTop, behavior: 'smooth'});
             if (!navItem.classList.contains('active')) {
@@ -844,7 +867,8 @@
 
     for (let i = 0; i < coursesContainers.length; i++) {
         sideNav.appendChild(createNavItem(
-            coursesContainers[i].querySelector('.category-title').innerHTML,
+            coursesDetails[i].categoryTitle,
+            coursesDetails[i].categoryIcon,
             coursesContainers[i],
             i === coursesContainers.length - 1
         ));

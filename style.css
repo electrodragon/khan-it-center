@@ -20,7 +20,7 @@ body {
   height: 100vh;
   justify-content: space-between;
 }
-.main-page .side-nav div {
+.main-page .side-nav .side-nav-item {
   flex: 1;
   background: #4b00ff;
   text-transform: uppercase;
@@ -30,10 +30,17 @@ body {
   padding-left: 16px;
   padding-right: 16px;
 }
-.main-page .side-nav div.active {
+.main-page .side-nav .side-nav-item .category-icon {
+  display: none;
+}
+.main-page .side-nav .side-nav-item .category-text {
+  font-size: 1.3rem;
+  margin-left: 8px;
+}
+.main-page .side-nav .side-nav-item.active {
   background: #7d00ff;
 }
-.main-page .side-nav div:hover {
+.main-page .side-nav .side-nav-item:hover {
   background: #6400ff;
   cursor: pointer;
 }
@@ -50,8 +57,18 @@ body {
   padding: 16px;
 }
 .main-page .courses-warehouse .courses-container .category-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   text-transform: uppercase;
+}
+.main-page .courses-warehouse .courses-container .category-title .category-icon {
+  font-size: 1.7rem;
+}
+.main-page .courses-warehouse .courses-container .category-title .category-text {
+  margin-left: 8px;
+  margin-bottom: 0;
 }
 .main-page .courses-warehouse .courses-container .courses {
   display: flex;
@@ -71,18 +88,22 @@ body {
   padding: 16px;
 }
 .main-page .courses-warehouse .courses-container .courses .course .head .course-title {
+  flex: 3;
   color: white;
   text-transform: uppercase;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 .main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  height: 90px;
   padding: 8px;
   background: #3200ff;
   align-items: center;
+}
+.main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .fee, .main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .duration {
+  font-size: 1.3rem;
 }
 .main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .fee {
   margin: 0;
@@ -212,6 +233,126 @@ body {
 
 .fira-font {
   font-family: "Fira Code", monospace;
+}
+
+@media (max-width: 900px) {
+  .main-page .side-nav .side-nav-item {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .main-page .side-nav .side-nav-item .category-icon {
+    display: block;
+    font-size: 1.3rem;
+  }
+  .main-page .side-nav .side-nav-item .category-text {
+    display: none;
+  }
+  .main-page .courses-warehouse .courses-container {
+    padding: 8px;
+  }
+  .main-page .courses-warehouse .courses-container .category-title .category-text {
+    margin-left: 8px;
+  }
+  .main-page .courses-warehouse .courses-container .courses {
+    flex-wrap: nowrap;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px 0 0 0;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .head .course-title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    padding: 4px 8px;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .fee {
+    font-size: 1.1rem;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .separator {
+    height: 20px;
+    content: "abc";
+    width: 2px;
+    margin: 0;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .head .duration-and-fee .duration {
+    font-size: 1.1rem;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container {
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .prerequisites-area {
+    padding: 8px;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .prerequisites-area .title {
+    letter-spacing: 0.1em;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .title, .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad {
+    flex: 1;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .title {
+    margin: 0;
+    align-items: center;
+    letter-spacing: 0.1em;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad * {
+    flex: none;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad .inc-btn, .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad .dec-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    width: 55px;
+    height: 35px;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .course-middle-container .discounts-area .display-pad .discount-percentage {
+    font-size: 1.1rem;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .footer {
+    flex-direction: column;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .footer .contents-container, .main-page .courses-warehouse .courses-container .courses .course .footer .projects-container {
+    flex: none;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .footer .contents-container {
+    border-bottom-left-radius: 0;
+    padding: 8px;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .footer .contents-container .title {
+    letter-spacing: 0.1em;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .footer .projects-container {
+    border-bottom-left-radius: 10px;
+    padding: 8px;
+  }
+  .main-page .courses-warehouse .courses-container .courses .course .footer .projects-container .title {
+    letter-spacing: 0.1em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

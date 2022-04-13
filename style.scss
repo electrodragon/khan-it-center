@@ -16,6 +16,10 @@ $green-layer-two: rgb(100, 0, 255);
 $green-layer-three: rgb(75, 0, 255);
 $green-layer-four: rgb(50, 0, 255);
 
+$layout-breakpoint-mobile: 480px;
+$layout-breakpoint-tablet: 768px;
+$layout-breakpoint-laptop: 900px;
+
 .main-page {
   display: flex;
 
@@ -25,7 +29,7 @@ $green-layer-four: rgb(50, 0, 255);
     height: 100vh;
     justify-content: space-between;
 
-    div {
+    .side-nav-item {
       flex: 1;
       background: $green-layer-three;
       text-transform: uppercase;
@@ -34,6 +38,15 @@ $green-layer-four: rgb(50, 0, 255);
       align-items: center;
       padding-left:16px;
       padding-right:16px;
+
+      .category-icon {
+        display: none;
+      }
+
+      .category-text {
+        font-size: 1.3rem;
+        margin-left: 8px;
+      }
 
       &.active {
         background: $green-layer-one;
@@ -60,8 +73,20 @@ $green-layer-four: rgb(50, 0, 255);
       padding: 16px;
 
       .category-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
         text-transform: uppercase;
+
+        .category-icon {
+          font-size: 1.7rem;
+        }
+
+        .category-text {
+          margin-left: 8px;
+          margin-bottom: 0;
+        }
       }
 
       .courses {
@@ -81,19 +106,24 @@ $green-layer-four: rgb(50, 0, 255);
             padding: 16px;
 
             .course-title {
+              flex: 3;
               color: white;
               text-transform: uppercase;
-              font-size: 2.2rem;
+              font-size: 1.6rem;
               font-weight: bold;
             }
 
             .duration-and-fee {
+              flex: 1;
               display: flex;
               flex-direction: column;
-              height: 90px;
               padding: 8px;
               background: $green-layer-four;
               align-items: center;
+
+              .fee, .duration {
+                font-size: 1.3rem;
+              }
 
               .fee {
                 margin: 0;
@@ -247,10 +277,8 @@ $green-layer-four: rgb(50, 0, 255);
         }
       }
     }
-
   }
 }
-
 
 .text-green {
   color: limegreen;
@@ -258,4 +286,175 @@ $green-layer-four: rgb(50, 0, 255);
 
 .fira-font {
   font-family: 'Fira Code', monospace;
+}
+
+@media (max-width: $layout-breakpoint-laptop) {
+  .main-page {
+
+    .side-nav {
+      .side-nav-item {
+        padding-left: 8px;
+        padding-right: 8px;
+
+        .category-icon {
+          display: block;
+          font-size: 1.3rem;
+        }
+
+        .category-text {
+          display: none;
+        }
+      }
+    }
+
+    .courses-warehouse {
+
+      .courses-container {
+        padding: 8px;
+
+        .category-title {
+
+          .category-icon {
+
+          }
+
+          .category-text {
+            margin-left: 8px;
+          }
+        }
+
+        .courses {
+          flex-wrap: nowrap;
+
+          .course {
+
+            .head {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              padding: 4px 0 0 0;
+
+              .course-title {
+                color: white;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                text-align: center;
+                letter-spacing: 1px;
+                font-weight: bold;
+              }
+
+              .duration-and-fee {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                height: auto;
+                width: 100%;
+                padding: 4px 8px;
+
+                .fee {
+                  font-size: 1.1rem;
+                }
+
+                .separator {
+                  height: 20px;
+                  content: 'abc';
+                  width: 2px;
+                  margin: 0;
+                }
+
+                .duration {
+                  font-size: 1.1rem;
+                }
+              }
+
+            }
+
+            .course-middle-container {
+              padding: 0;
+              flex-direction: column-reverse;
+
+              .prerequisites-area {
+                padding: 8px;
+
+                .title {
+                  letter-spacing: 0.100em;
+                }
+
+                ul {
+
+                }
+              }
+
+              .discounts-area {
+                padding: 8px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .title, .display-pad {
+                  flex: 1;
+                }
+
+                .title {
+                  margin: 0;
+                  align-items: center;
+                  letter-spacing: 0.100em;
+                }
+
+                .display-pad {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+
+                  * {
+                    flex: none;
+                  }
+
+                  .inc-btn, .dec-btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.1rem;
+                    width: 55px;
+                    height: 35px;
+
+                  }
+
+                  .discount-percentage {
+                    font-size: 1.1rem;
+                  }
+                }
+              }
+            }
+
+            .footer {
+              flex-direction: column;
+
+              .contents-container, .projects-container {
+                flex: none;
+              }
+
+              .contents-container {
+                border-bottom-left-radius: 0;
+                padding: 8px;
+
+                .title {
+                  letter-spacing: 0.100em;
+                }
+              }
+
+              .projects-container {
+                border-bottom-left-radius: 10px;
+                padding: 8px;
+
+                .title {
+                  letter-spacing: 0.100em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
